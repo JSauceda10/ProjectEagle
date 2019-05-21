@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public class SkillDAOImpl implements SkillDAO {
     ArrayList<Skill> skills;
-
+    
     public SkillDAOImpl() {
         skills = new ArrayList<>();
     }

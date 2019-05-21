@@ -5,22 +5,26 @@
  */
 package com.pel2.dto;
 
+import com.couchbase.client.java.repository.annotation.Field;
+import com.couchbase.client.java.repository.annotation.Id;
+import org.springframework.data.couchbase.core.mapping.Document;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 /**
  *
  * @author JOSEPH
  */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Document
 public class Skill {
-    private String name;
+    @Id
     private int id;
-
-    public Skill() {
-    }
-
-    public Skill(String name, int id) {
-        this.name = name;
-        this.id = id;
-    }
-
+    @Field
+    private String name;
+    
     public String getName() {
         return name;
     }

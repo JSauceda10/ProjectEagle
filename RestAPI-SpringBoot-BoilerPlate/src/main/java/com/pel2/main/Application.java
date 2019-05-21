@@ -9,12 +9,14 @@ import org.springframework.context.annotation.ComponentScan;
  * Main class to start the Spring boot application.
  *
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.pel2.Application","com.pel2.dao.SkillRepo"})
 @ComponentScan(basePackages = { "com.pel2" })
 public class Application {
+    
+    
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+    public static void main(String[] args) {
+            SpringApplication.run(Application.class, args);
+    }
 
 }
