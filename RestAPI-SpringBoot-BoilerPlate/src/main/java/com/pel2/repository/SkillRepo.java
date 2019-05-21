@@ -7,8 +7,10 @@ package com.pel2.repository;
 
 import com.pel2.dto.Skill;
 import java.io.Serializable;
+import org.springframework.context.annotation.Bean;
 import org.springframework.data.couchbase.core.query.N1qlPrimaryIndexed;
 import org.springframework.data.couchbase.core.query.ViewIndexed;
+import org.springframework.data.couchbase.repository.CouchbasePagingAndSortingRepository;
 import org.springframework.data.couchbase.repository.CouchbaseRepository;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +22,6 @@ import org.springframework.stereotype.Service;
 @ViewIndexed(designDoc = "skill", viewName = "all")
 //This annotation is necessary to prevent a 'bean error'
 @Service
-public interface SkillRepo extends CouchbaseRepository<Skill, Integer>{  
+public interface SkillRepo extends CouchbasePagingAndSortingRepository<Skill, Integer>{  
     
 }
