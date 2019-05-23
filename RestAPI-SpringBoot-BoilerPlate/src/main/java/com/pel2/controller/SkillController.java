@@ -30,6 +30,9 @@ public class SkillController {
     public void InitSkillRepo(){
         skillRepo.save(Stream.of(new Skill(1,"CouchBase"), new Skill(2,"SQL")).collect(Collectors.toList()));
     }
+    
+    //implement post and get methods
+    
     @GetMapping("/allSkills")
     public Iterable<Skill> getAll(){
         return skillRepo.findAll();
