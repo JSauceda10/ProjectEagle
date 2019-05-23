@@ -23,5 +23,7 @@ import org.springframework.stereotype.Service;
 //This annotation is necessary to prevent a 'bean error'
 @Service
 public interface SkillRepo extends CouchbasePagingAndSortingRepository<Skill, Integer>{  
+
+    
     
 }
