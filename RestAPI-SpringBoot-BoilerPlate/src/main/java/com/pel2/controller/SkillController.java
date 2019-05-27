@@ -62,4 +62,14 @@ public class SkillController {
         return skillRepo.findAll();
         
     }
+    
+    @RequestMapping(
+            method = RequestMethod.DELETE,
+            produces = MediaType.APPLICATION_JSON_VALUE,
+            path = "{id}"
+    )
+    public void removeSkillById(@PathVariable("id") int id){
+        skillRepo.delete(id);
+        
+    }
 }
