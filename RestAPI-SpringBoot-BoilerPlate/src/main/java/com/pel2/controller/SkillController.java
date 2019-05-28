@@ -32,7 +32,7 @@ public class SkillController {
     
     @PostConstruct
     public void InitSkillRepo(){
-        skillRepo.save(Stream.of(new Skill(1,"CouchBase"), new Skill(2,"SQL")).collect(Collectors.toList()));
+        skillRepo.save(Stream.of(new Skill(1,"CouchBase",1,"java",Skill.EnumPlatform.DISTRIBUTED), new Skill(2,"SQL",1,"java",Skill.EnumPlatform.DISTRIBUTED)).collect(Collectors.toList()));
     }
     
     @RequestMapping(

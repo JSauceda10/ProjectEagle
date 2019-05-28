@@ -24,6 +24,18 @@ public class Skill {
     private int id;
     @Field
     private String name;
+    @Field
+    private int level;
+    @Field
+    private String language;
+    
+    public enum EnumPlatform 
+    { 
+        DISTRIBUTED, MAINFRAME; 
+    }
+    @Field
+    EnumPlatform platform;
+    
     
     public String getName() {
         return name;
@@ -40,6 +52,8 @@ public class Skill {
     public void setId(int id) {
         this.id = id;
     }
+    
+    
     
     
 }
